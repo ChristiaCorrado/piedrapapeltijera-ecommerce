@@ -1,9 +1,7 @@
 import React from 'react'
 import './NavStyles.css'
-import logo from './logo.png'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingBag} from '@fortawesome/free-solid-svg-icons'
-import {faUser} from '@fortawesome/free-solid-svg-icons'
+import logo from '../assets/logo.png'
+import CardWidget from '../CardWidget/CardWidget'
 
 const NavBar = ()=>{
 
@@ -11,11 +9,12 @@ const NavBar = ()=>{
         <>
         <nav>
             
-                <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" />
             
 
             <div id="buscar">
-                <input className="findProduct" type="text" id="buscarProducto" placeHolder="Buscar"/>
+            
+                <input className="findProduct" type="text" id="buscarProducto" placeHolder='Buscar'/>
             </div>
 
             <div id="lista">
@@ -27,10 +26,8 @@ const NavBar = ()=>{
 
             </div>
 
-            <div id="carrito" className="carrito">  
-                <FontAwesomeIcon icon={faShoppingBag} className="listArt"/>
-                <FontAwesomeIcon icon={faUser} className="listArt"/>
-            </div>
+            <CardWidget/>
+            
         </nav>
         </>
     )

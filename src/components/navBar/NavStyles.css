@@ -18,14 +18,14 @@ nav{
     padding: 10px;
     background: linear-gradient(to right, #fffec6, #fbd786, #f7797d);
     width:100%;
-    height:100px;
+    height:80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
 nav img{
-    height:100%;
+    height:60%;
 }
 
 .list{
@@ -39,4 +39,12 @@ nav img{
 
 li{
     cursor: pointer;
+}
+.rellenateContainer{
+    height: 80px;
+}
+.ItemListContainer{
+    background-color:#1f1515;
+    width: 100%;
+    height:100vh;
 }

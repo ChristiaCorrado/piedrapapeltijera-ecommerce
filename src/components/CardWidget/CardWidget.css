@@ -1,0 +1,6 @@
+.carrito{
+    width:41px;
+    position:relative;
+    display: flex;
+    flex-direction:row;
+}
