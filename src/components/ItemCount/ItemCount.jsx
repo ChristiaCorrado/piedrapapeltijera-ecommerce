@@ -2,27 +2,36 @@ import React from 'react'
 import { useState } from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({ stock, initial,  onAdd }) =>{
+const ItemCount = ({ stock, initial }) =>{
 
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(initial)
 
-    const additem = () =>{
-        setCounter(counter + 1)
+    const onAdd = () =>{
+        if (stock>= initial) {
+            const additem = () =>{
+                setCounter(counter + 1)
+            }
+            additem()
+        }
     }
+    
 
-    const removeitem = () =>{
-        setCounter(counter - 1)
-    }
+   const onDecre = () =>{
+       if (stock = !0) {
+           const removeitem = () =>{
+               setCounter(counter - 1)
+           }
+           removeitem()
+       }
+       
+   }
 
     return (
 
         <div className="counter">
+            <button onClick={onDecre}> - </button>
             <p>{counter}</p>
-            <div>
-                <button onClick={additem}> + </button>
-                <button onClick={removeitem}> - </button>
-
-            </div>
+            <button onClick={onAdd}> + </button>
         </div>
     
     )

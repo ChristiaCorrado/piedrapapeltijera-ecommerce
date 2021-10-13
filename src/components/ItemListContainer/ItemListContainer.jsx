@@ -10,7 +10,7 @@ const ItemListContainer = () =>{
         <div className="ItemListContainer">
             <div className="rellenateContainer"></div>
 
-            <ItemCount/>
+            <ItemCount stock={5} initial={1} />
 
         
         </div>

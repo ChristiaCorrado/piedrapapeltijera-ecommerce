@@ -1,15 +1,16 @@
 .counter{
     font-weight: bold;
-    position: absolute;
-    background: Red;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    right: 0;
-    bottom: 0;
+    background: #fff;
+    color: blue;
+    width: 10rem;
+    height: 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
+}
+
+.counter button {
+    background: transparent;
+    font-size: 1.5rem;
 }
