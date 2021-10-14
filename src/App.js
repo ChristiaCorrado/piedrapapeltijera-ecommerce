@@ -2,6 +2,7 @@ import NavBar from './components/navBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
+
   return (
     <div>
       <header>

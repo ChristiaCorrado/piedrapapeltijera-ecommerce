@@ -1,16 +1,23 @@
-.counter{
+.counterContainer{
     font-weight: bold;
     background: #fff;
     color: blue;
     width: 10rem;
     height: 3rem;
     display: flex;
+    flex-direction:column;
     justify-content: space-around;
     align-items: center;
     
 }
 
-.counter button {
+.counterContainer button {
     background: transparent;
     font-size: 1.5rem;
+}
+.counter{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
