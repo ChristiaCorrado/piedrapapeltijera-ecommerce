@@ -1,4 +1,5 @@
 import React from 'react'
+import Item from '../Item/item'
 import ItemCount from '../ItemCount/ItemCount'
 
 
@@ -10,7 +11,7 @@ const ItemListContainer = () =>{
             <div className="ItemListContainer">
                 <div className="rellenateContainer"></div>
 
-                <ItemCount stock={5} initial={1} onAdd/>
+                <Item/>
 
             
             </div>

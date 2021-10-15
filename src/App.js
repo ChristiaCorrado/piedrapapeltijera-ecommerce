@@ -3,6 +3,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 function App() {
 
+
   return (
     <div>
       <header>
@@ -10,6 +11,7 @@ function App() {
       </header>
       
       <body>
+        
         <ItemListContainer/>
       </body>
     </div>

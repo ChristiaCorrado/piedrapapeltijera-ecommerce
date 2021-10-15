@@ -1,0 +1,24 @@
+.card{
+    text-align: center;
+    width:10rem;
+    height:15rem;
+    background:#fff;
+    padding:10px;
+}
+
+.tittleCard{
+    text-align: left;
+}
+
+.pictureCard{
+    width: 100%;
+    height: 40%;
+    background-image: url(../assets/esc4.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.cardAddButton{
+    width: 100%;
+    height:2rem;
+}
