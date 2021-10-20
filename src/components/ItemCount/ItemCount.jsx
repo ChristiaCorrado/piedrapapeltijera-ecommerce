@@ -7,7 +7,7 @@ const ItemCount = ({ stock, initial}) =>{
     const [counter, setCounter] = useState(initial)
 
     const removeItem = () =>{
-        if (stock = !0 && counter > initial){
+        if (stock !== 0 && counter > initial){
            setCounter(counter - 1)
         }else{
             alert(`no puede agregar 0`)
