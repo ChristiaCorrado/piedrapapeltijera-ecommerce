@@ -1,9 +1,10 @@
+
 [       
  {
      "id": "00001",
      "title": "Resaltador Filgo Text MARKET",
      "description": "Pack resaltador filgo X 4",
-     "picture_url":"../piedrapapeltijera-ecommerce/src/components/assets/productos/escolar/esc4.jpg",
+     "picture_url":"/media/productos/escolar/esc4.jpg",
      "category_id": "Resaltadores",
      "quantity": 4,
      "unit_price": 220,
@@ -13,10 +14,10 @@
     "id": "00002",
     "title": "Resaltador Filgo Text MARKET",
     "description": "Pack resaltador filgo X 4",
-    "picture_url":"./components/assets/productos/escolar/esc4.jpg",
+    "picture_url":"/media/productos/escolar/esc4.jpg",
     "category_id": "Resaltadores",
     "quantity": 4,
-    "unit_price": 220,
+    "unit_price": 4510,
     "currency":"ARS"
 }  
 

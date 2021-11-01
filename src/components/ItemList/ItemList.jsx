@@ -27,8 +27,6 @@ const ItemList = () =>{
     }, [])
 
 
-    console.log(allProducts);
-
 
     return(
         <>
