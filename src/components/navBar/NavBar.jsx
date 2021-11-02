@@ -29,7 +29,9 @@ const NavBar = ()=>{
         <nav>
             <button className="listArt barsMenu" onClick={handleClick} ><i className={clicked ? 'fas fa-times' : "fas fa-bars"}></i></button>
             <div className="imgContainer">
-                <img src={logo} alt="logo" />
+                <Link to={"/"}>
+                    <img src={logo} alt="logo" />
+                </Link>
             </div>
             
             <div id="lista" className={clicked ? ' listContainer hiddenMenu' : 'listContainer'} >
