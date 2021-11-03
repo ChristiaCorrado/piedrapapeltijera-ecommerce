@@ -36,7 +36,9 @@ const NavBar = ()=>{
             
             <div id="lista" className={clicked ? ' listContainer hiddenMenu' : 'listContainer'} >
                 <ul className="list">
-                    <li className="listArt">Home</li>
+                    <Link to={"/"}>
+                        <li className="listArt">Home</li>
+                     </Link>   
 
                     <Link to={"products"}>
                         <li className="listArt">Productos</li>
@@ -47,9 +49,11 @@ const NavBar = ()=>{
             </div>
 
             <div id="buscar" className="buttonsMenu">
-                <input className="findProduct listArt" type="text" id="buscarProducto" placeHolder="Buscar"/>
-                <CardWidget/>
+                <label for="Name"><i class="fas fa-search"></i></label>
+                <input className="findProduct listArt" type="text" id="buscarProducto" placeHolder="Buscar" name="Name"/>
                 
+                
+                <CardWidget/>
             </div>
 
             

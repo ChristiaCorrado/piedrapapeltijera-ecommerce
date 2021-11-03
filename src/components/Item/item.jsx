@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Item = ({ allProducts }) =>{
 
+
+
     return (
         <>
             <div className="card" id={allProducts.id}>

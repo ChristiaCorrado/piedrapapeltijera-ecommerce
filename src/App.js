@@ -1,10 +1,9 @@
 import NavBar from './components/navBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import Slider from './components/Slider/Slider';
 import './App.css'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import SliderImage from './components/Slider/SliderImage.json'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Home from './components/Home/Home';
 
 function App() {
 
@@ -17,7 +16,7 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Slider slides={ SliderImage } />
+          <Home/>
         </Route>
 
         <Route exact path="/products">

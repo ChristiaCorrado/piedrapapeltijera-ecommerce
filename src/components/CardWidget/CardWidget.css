@@ -2,3 +2,32 @@
     display: flex;
     flex-direction:row;
 }
+
+.iconsNav{
+    cursor: pointer;
+}
+
+.cartContainer{
+    position: absolute;
+    height:100vh;
+    width:500px;
+    background: white;
+    bottom: 0px;
+    right: -500px;
+    transition: all 0.8s ease;
+    z-index: 3;
+    transform: scaleX(0);
+}
+
+.hiddenContainer{
+    right: 0;
+    transform: scaleX(1);
+}
+
+
+.closeCart{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}

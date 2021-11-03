@@ -41,7 +41,8 @@
 
 .boxDescription{
     padding-left: 20px;
-    padding-right: 20px
+    padding-right: 20px;
+    width: 40%;
 }
 
 .boxDescription .priceCardDetail{

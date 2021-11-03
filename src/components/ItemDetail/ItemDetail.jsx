@@ -5,6 +5,8 @@ import './itemDetail.css'
 
 const ItemDetail = ( {item} ) => {
 
+
+   
     return(
         <>
             <div className="itemDetail">
