@@ -1,25 +1,33 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 import './ItemCount.css'
 
-const ItemCount = ({ stock, initial}) =>{
+const ItemCount = ({ stock, initial, itemAdd}) =>{
 
+    
     const [counter, setCounter] = useState(initial)
-
-    const removeItem = () =>{
+    
+    const decrementCounter = () =>{
         if (stock !== 0 && counter > initial){
-           setCounter(counter - 1)
+            setCounter(counter - 1)
         }else{
             alert(`no puede agregar 0`)
         }
     }
     
-    const addItem = () =>{
+    const incrementCounter = () =>{
         if (stock > counter){
             setCounter(counter + 1)
         }else{
             alert(`no puede agregar mas de ${counter}`)
         }
+    }
+    
+    const {addItemToCart} = useContext(CartContext);
+
+    const onAdd = () => {
+        addItemToCart(itemAdd, counter)
     }
 
     return (
@@ -28,10 +36,11 @@ const ItemCount = ({ stock, initial}) =>{
             <div className="counterContainer">
                 <p>Disponibles = {stock}</p>
                 <div className="counter">
-                    <button onClick={removeItem}> - </button>
+                    <button onClick={decrementCounter}> - </button>
                     <p>{counter}</p>
-                    <button onClick={addItem}> + </button>
+                    <button onClick={incrementCounter}> + </button>
                 </div>
+                <button className="cardAddButton" onClick={onAdd}>AGREGAR AL CARRITO</button>
             </div>
         </>
     

@@ -8,8 +8,12 @@
 }
 
 .cartContainer{
-    position: absolute;
-    height:100vh;
+    padding:10px;
+    position: fixed;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    height:100%;
     width:500px;
     background: white;
     bottom: 0px;
@@ -26,8 +30,9 @@
 
 
 .closeCart{
-    margin-top: 10px;
-    margin-left: 10px;
+    top: 30px;
+    left: 10px;
     font-size: 25px;
+    position: fixed;
     cursor: pointer;
 }

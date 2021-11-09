@@ -1,12 +1,11 @@
 import ItemCount from "../ItemCount/ItemCount";
 import './itemDetail.css'
+import { useState, useEffect } from "react"
 
 
 
 const ItemDetail = ( {item} ) => {
-
-
-   
+     
     return(
         <>
             <div className="itemDetail">
@@ -22,9 +21,9 @@ const ItemDetail = ( {item} ) => {
                         <div className="priceCardDetail">${item.unit_price}</div>
                         <div className="buttonBox">
                             <div className="counterDetail">
-                                <ItemCount stock={item.quantity} initial={1} />
+                                <ItemCount stock={item.quantity} initial={1} itemAdd={item} />
                             </div>
-                            <button className="cardAddButton">AGREGAR AL CARRITO</button>
+                            
                         </div>
                     </div>
                 </div>

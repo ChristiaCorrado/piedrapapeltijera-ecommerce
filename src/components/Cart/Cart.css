@@ -1,0 +1,7 @@
+.cardCart{
+    width: 95%;
+    height:30%;
+    background:red;
+    box-shadow: 0 15px 30px 1px grey;
+    border-radius:10px;
+}

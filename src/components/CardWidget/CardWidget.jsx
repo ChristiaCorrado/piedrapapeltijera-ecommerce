@@ -1,26 +1,15 @@
-import React from "react";  
+import React,  { useContext } from "react"; 
 import './CardWidget.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingBag} from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
-import {useState} from 'react'
+import { CartContext } from "../../context/CartContext";
 import Cart from "../Cart/Cart";
 
 const CardWidget = () => {
 
-    
-    const [cartClicked, setCartClicked] = useState(false);
-    
+    const {cartClicked, clickOnCart} = useContext(CartContext)
 
-    const clickOnCart = () => {
-        if (cartClicked === false) {
-            setCartClicked(true)
-            console.log('click');
-        }else{
-            setCartClicked(false)
-            console.log('noclick');
-        }  
-    }
 
     
 
