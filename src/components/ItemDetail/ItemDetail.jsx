@@ -13,7 +13,7 @@ const ItemDetail = ( {item} ) => {
                 <div className="boxItemDetail">
 
                     <div className="boxImg">
-                        <div id="picture"><img alt="cmmo" src={item.picture_url} className="pictureDetail"/></div>
+                        <img alt="cmmo" src={item.picture_url} className="pictureDetail"/>
                     </div>
 
                     <div className="boxDescription">

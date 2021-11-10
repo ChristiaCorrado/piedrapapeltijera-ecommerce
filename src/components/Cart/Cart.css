@@ -1,7 +1,42 @@
 .cardCart{
-    width: 95%;
-    height:30%;
-    background:red;
+    width: 100%;
     box-shadow: 0 15px 30px 1px grey;
     border-radius:10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.cardCart img{
+    width: 90%;
+    display: flex;
+}
+
+.cardCart .removeItem{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.cartVacio{
+    width: 100%;
+    height: 350px;
+    background-image: url("../Cart/addToCart.svg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.cartVacioImg{
+    width: 100%;
+}
+
+.cardBody{
+    padding: 15px;
+}
+
+
+.cardTitle{
 }

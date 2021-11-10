@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Products from '../../Products.json';
 import { useState, useEffect } from "react";
+import Loader from "../Loader/Loader.jsx";
 
 
 
@@ -36,9 +37,9 @@ const ItemDetailContainer = () => {
     
 
     return(
-        <>
-        {allProducts ? allProducts.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : "Loading..."}
-        </>
+        <div className="itemList">
+            {allProducts ? allProducts.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <Loader/>}
+        </div>
     )
 }
 

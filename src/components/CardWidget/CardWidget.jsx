@@ -19,10 +19,17 @@ const CardWidget = () => {
                     <FontAwesomeIcon icon={faShoppingBag} className="iconsNav" onClick={clickOnCart}></FontAwesomeIcon>
                     <FontAwesomeIcon icon={faUser} className="iconsNav"/>
                     <div className={cartClicked ? ' cartContainer hiddenContainer ' : 'cartContainer'}>
-                        <div className='closeCart' onClick={clickOnCart}>
-                            <div className='fas fa-times'/>
+                        <div className="headerCart">
+                            <div>Carrito de Compras</div>
+
+                            <div className='closeCart' onClick={clickOnCart}>
+                                <div className='fas fa-times'/>
+                            </div>
                         </div>
-                        <Cart />
+                        <div className="productsInCart">
+                            <Cart />
+
+                        </div>
                     </div>
             </div>
         </>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react"
 import './ItemList.css'
 import Products from '../../Products.json'
+import Loader from "../Loader/Loader.jsx";
 
 
 const ItemList = () =>{
@@ -31,7 +32,7 @@ const ItemList = () =>{
     return(
         <>
             <div className="itemList">
-               {allProducts ? allProducts.map(productPaint => <Item allProducts={productPaint} />) : "Loading..."}
+               {allProducts ? allProducts.map(productPaint => <Item allProducts={productPaint} />) : <Loader/>}
             </div>
         </>
     )

@@ -33,3 +33,11 @@
 .counter button {
     background: transparent;
 }
+.counterBtns{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center
+}

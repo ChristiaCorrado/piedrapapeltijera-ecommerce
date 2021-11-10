@@ -10,17 +10,15 @@
 .cartContainer{
     padding:10px;
     position: fixed;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
     height:100%;
     width:500px;
     background: white;
     bottom: 0px;
     right: -500px;
     transition: all 0.8s ease;
-    z-index: 3;
+    z-index: 99;
     transform: scaleX(0);
+    box-shadow: 0 15px 30px 1px grey;
 }
 
 .hiddenContainer{
@@ -28,11 +26,33 @@
     transform: scaleX(1);
 }
 
+.productsInCart{
+    padding-top: 80px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
 
 .closeCart{
-    top: 30px;
     left: 10px;
     font-size: 25px;
     position: fixed;
     cursor: pointer;
+}
+
+.headerCart{
+    color: #fff;
+    font-weight: 700;
+    font-size:24px;
+    background: #ff6347;
+    width: 100%;
+    position:fixed;
+    height:75px;
+    top: 0;
+    left: 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }

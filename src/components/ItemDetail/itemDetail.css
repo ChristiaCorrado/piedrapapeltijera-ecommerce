@@ -1,8 +1,5 @@
 .itemDetail{
-    padding:70px;
-    height: 100vh;
     transition: all 0.5s ease;
-    background: rgba(0, 0, 0, 0.200);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -12,11 +9,19 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 4%;
+}
+
+.counterContainer{
+    display: flex;
+    flex-direction: row;
 }
 
 .boxImg{
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 500px;
+    max-height: 500px;
+    margin-right: 20px;
 }
 
 .boxImg img{
@@ -47,15 +52,6 @@
     padding-top: 30px;
 }
 
-.counterDetail{
-    background-color: transparent;
-    width: 100%;
-    margin-right:20px;
-}
-
-.counterDetail .counterContainer{
-    background-color:transparent;
-}
 
 .counterDetail .counterContainer{
     display: flex;
@@ -67,5 +63,28 @@
     width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
-    height:20px;
+    height:25px;
+}
+
+.itemList{
+    padding: 0%;
+}
+
+@media  only screen and (max-width: 320px) {
+    .boxImg {
+        width: 100%;
+    }
+
+    .boxImg img{
+        border-radius: 20px;
+    }
+    .itemDetail{
+        padding-top: 10px;
+    }
+    .boxItemDetail{
+       flex-direction: column;
+    }
+    .boxDescription{
+        width: 100%;
+    }
 }
