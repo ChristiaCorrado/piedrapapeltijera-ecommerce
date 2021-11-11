@@ -40,7 +40,7 @@ const NavBar = ()=>{
                         <li className="listArt">Home</li>
                      </Link>   
 
-                    <Link to={"products"}>
+                    <Link to={"/products"}>
                         <li className="listArt">Productos</li>
                     </Link> 
                     
@@ -51,8 +51,7 @@ const NavBar = ()=>{
             <div id="buscar" className="buttonsMenu">
                 <label for="Name"><i class="fas fa-search"></i></label>
                 <input className="findProduct listArt" type="text" id="buscarProducto" placeHolder="Buscar" name="Name"/>
-                
-                
+                                
                 <CardWidget/>
             </div>
 

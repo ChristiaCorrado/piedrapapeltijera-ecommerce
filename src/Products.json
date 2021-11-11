@@ -25,7 +25,7 @@
     "title": "Set 3 Clip Mickey & Minnie Love Mooving",
     "description": "3 Clip Mickey & Minnie Love Mooving Nº6 ",
     "picture_url":"/media/productos/escolar/clipsMikey.png",
-    "category_id": "Marcadores",
+    "category_id": "Accesorios",
     "quantity": 3,
     "unit_price": 350,
     "currency":"ARS"
@@ -45,7 +45,7 @@
     "title": "Boligrafo Retractil Pastel x 4",
     "description": "Boligrafo Deli azul 0.7mm retractil pastel pack x 4",
     "picture_url":"/media/productos/escolar/boligrafoPastelDeli.png",
-    "category_id": "Marcadores",
+    "category_id": "Boligrafos",
     "quantity": 3,
     "unit_price": 200,
     "currency":"ARS"
@@ -55,7 +55,7 @@
     "title": "Lapicero Zorrito + Resaltadores",
     "description": "Lapicero Zorrito + Resaltadores fino Filgo pastel x 8 colores surtidos",
     "picture_url":"/media/productos/escolar/lapicero.png",
-    "category_id": "Marcadores",
+    "category_id": "Accesorios",
     "quantity": 3,
     "unit_price": 1050,
     "currency":"ARS"

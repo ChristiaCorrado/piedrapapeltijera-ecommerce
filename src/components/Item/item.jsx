@@ -1,7 +1,8 @@
 import React from 'react';
-import ItemCount from '../ItemCount/ItemCount';
 import './item.css';
 import { Link } from 'react-router-dom';
+
+
 
 const Item = ({ allProducts }) =>{
 
@@ -14,8 +15,8 @@ const Item = ({ allProducts }) =>{
                 <div className="boxMiniDetail">
                     <div id="description" className="descriptionCard">{allProducts.description}</div>
                     <div id="price" className="priceCard">${allProducts.unit_price}</div>                
-                <div className="boxVerMas">
-                    <Link to={allProducts.id}><button className="cardSeeMore"><i class="fas fa-eye"></i> VER</button></Link>
+                <div className="">
+                    <Link to={`item/${allProducts.id}`}><button className="cardSeeMore"><i class="fas fa-eye boxVerMas"/> VER</button></Link>
                 </div>
                 </div>
 		    </div>
