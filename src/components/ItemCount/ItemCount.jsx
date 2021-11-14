@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 import './ItemCount.css'
 
@@ -40,8 +41,8 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
                 {add ? (<>
                     <div className="">Producto Agregado al carrito</div>
                     <div className="">
-                        <button className="btn">Ver Mas Productos</button>
-                        <button className="btn">Finalizar Compra</button>
+                        <Link to="/products"><button className="btn">Ver Mas Productos</button></Link>                        
+                        <Link to="/cart"><button className="btn">Finalizar Compra</button></Link>
                     </div>
                 </>):(
 

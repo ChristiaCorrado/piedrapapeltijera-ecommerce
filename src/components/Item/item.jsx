@@ -16,7 +16,7 @@ const Item = ({ data }) =>{
                     <div id="description" className="descriptionCard">{data.title}</div>
                     <div id="price" className="priceCard">${data.unit_price}</div>                
                 <div className="">
-                    <Link to={`item/${data.id}`}><button className="cardSeeMore"><i class="fas fa-eye boxVerMas"/> VER</button></Link>
+                    <Link to={`/item/${data.id}`}><button className="cardSeeMore"><i class="fas fa-eye boxVerMas"/> VER</button></Link>
                 </div>
                 </div>
 		    </div>
