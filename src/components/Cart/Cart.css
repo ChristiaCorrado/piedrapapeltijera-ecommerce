@@ -1,42 +1,82 @@
 .cardCart{
     width: 100%;
+    height: 200px;
     box-shadow: 0 15px 30px 1px grey;
     border-radius:10px;
     margin-top: 20px;
     display: flex;
     flex-direction: row;
-    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productInCart{
+    width: 100%;
+    padding: 5px 50px 5px 50px;
+}
+
+.titleCart{
+    font-size:70px;
+    font-weight:700;
 }
 
 .cardCart img{
-    width: 90%;
+    height:100%;
     display: flex;
 }
 
 .cardCart .removeItem{
-    position: absolute;
-    right: 10px;
-    top: 10px;
     cursor: pointer;
+    font-size: 30px;
 }
 
 .cartVacio{
+    position: absolute;
+    margin-top: 10px;
     width: 100%;
-    height: 350px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.imgCartVacio{
+    width: 400px;
+    height: 500px;
     background-image: url("../Cart/addToCart.svg");
     background-position: center;
     background-size: cover;
     text-align: center;
 }
 
-.cartVacioImg{
-    width: 100%;
+.titleCartVacio{
+    width:500px;
+    height:500px;
+    font-size:70px;
+    font-weight:700;
+    padding-top: 80px;
+    color:white;
+    background:#EAEDED;
+    padding:1%;
 }
 
-.cardBody{
+.cardProductBody{
     padding: 15px;
 }
 
-
-.cardTitle{
+.headerCart{
+    color: #fff;
+    font-weight: 700;
+    font-size:24px;
+    background: #ff6347;
+    width: 100%;
+    position:fixed;
+    height:75px;
+    top: 0;
+    left: 0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
 }
+

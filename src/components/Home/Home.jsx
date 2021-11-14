@@ -1,7 +1,7 @@
 import React from "react";  
 import Slider from "../Slider/Slider";
-import SliderImage from '../../Products.json'
 import Categories from "../Categories/Categories"
+import SliderImage from '../Slider/SliderImage.json'
 
 const Home = () =>{
 

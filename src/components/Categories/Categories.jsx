@@ -20,10 +20,10 @@ const Categories = () =>{
                     </div>
                 </ Link>
 
-                <Link to={'products/Pinturitas'}>
+                <Link to={'products/Marcadores'}>
                     <div className="cardCategory">
-                        <h2 className="cardCategory-title">Pinturitas</h2>
-                        <img src="https://www.moovingargentina.com.ar/images/banners/home/coloring-02.jpg" alt=""/>
+                        <h2 className="cardCategory-title">Marcadores</h2>
+                        <img src="https://i.imgur.com/SIfj2fU.jpg?2" alt=""/>
 
                     </div>
                 </Link>
@@ -40,11 +40,20 @@ const Categories = () =>{
                         <img src="https://mundofw.com/wp-content/uploads/sb-instagram-feed-images/254462610_2167062260101751_6061584290731911926_nlow.jpg" alt=""/>
                     </div>
                 </Link>
+                <Link to={'products/Resaltadores'}>
+                    <div className="cardCategory">
+                        <h2 className="cardCategory-title">Resaltadores</h2>
+                        <img src="https://i.imgur.com/yavAJVM.jpg" alt=""/>
+                    </div>
+                </Link>
             </div>
         </>
     )
 
     
 }
+
+
+
 
 export default Categories

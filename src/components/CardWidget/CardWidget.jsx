@@ -1,14 +1,12 @@
-import React,  { useContext } from "react"; 
 import './CardWidget.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingBag} from '@fortawesome/free-solid-svg-icons'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
-import { CartContext } from "../../context/CartContext";
-import Cart from "../Cart/Cart";
+
+import { Link } from "react-router-dom";
 
 const CardWidget = () => {
 
-    const {cartClicked, clickOnCart} = useContext(CartContext)
 
 
     
@@ -16,21 +14,10 @@ const CardWidget = () => {
     return(
         <>
             <div id="carrito" className="carrito">
-                    <FontAwesomeIcon icon={faShoppingBag} className="iconsNav" onClick={clickOnCart}></FontAwesomeIcon>
+                    <Link to="/cart">
+                        <FontAwesomeIcon icon={faShoppingBag} className="iconsNav"></FontAwesomeIcon>
+                    </Link>
                     <FontAwesomeIcon icon={faUser} className="iconsNav"/>
-                    <div className={cartClicked ? ' cartContainer hiddenContainer ' : 'cartContainer'}>
-                        <div className="headerCart">
-                            <div>Carrito de Compras</div>
-
-                            <div className='closeCart' onClick={clickOnCart}>
-                                <div className='fas fa-times'/>
-                            </div>
-                        </div>
-                        <div className="productsInCart">
-                            <Cart />
-
-                        </div>
-                    </div>
             </div>
         </>
     )

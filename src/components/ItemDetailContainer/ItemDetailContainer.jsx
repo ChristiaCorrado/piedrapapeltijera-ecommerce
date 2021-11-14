@@ -1,44 +1,31 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Products from '../../Products.json';
 import { useState, useEffect } from "react";
 import Loader from "../Loader/Loader.jsx";
-
+import {collection , getDocs } from 'firebase/firestore';
+import {getFirestore} from "../../firebase";
 
 
 const ItemDetailContainer = () => {
 
     const {productId} = useParams()
-
     console.log(productId);
 
+    const [product, setProduct] = useState(null)
 
-    const [allProducts, setAllProduct] = useState(null)
-    console.log(allProducts);
-
-    const getProduct = (data) => new Promise((resolve, reject) =>{
-        setTimeout(() =>{
-            if (data) {
-                resolve(data)
-            }else{
-                reject(console.log('error'))
-            }
-        },2000)
-    });
-
+    console.log(product);
 
     useEffect(() =>{
-        getProduct(Products)
-        .then((res)=>setAllProduct(res))
-        .catch((err)=> console.log(err))
-    }, [])
-
-    
+        const db = getFirestore()
+        getDocs(collection(db,"items")).then
+        ((snapshot)=> setProduct(snapshot.docs.map((doc)=> doc.data())))
+    }, []);
+        
 
     return(
         <div className="itemList">
-            {allProducts ? allProducts.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <Loader/>}
+            {product ? product.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <Loader/>}
         </div>
     )
 }

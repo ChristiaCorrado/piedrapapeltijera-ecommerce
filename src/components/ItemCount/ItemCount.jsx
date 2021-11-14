@@ -7,6 +7,8 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
 
     
     const [counter, setCounter] = useState(initial)
+
+    const [add,setAdd]=useState(false)
     
     const decrementCounter = () =>{
         if (stock !== 0 && counter > initial){
@@ -28,21 +30,33 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
 
     const onAdd = () => {
         addItemToCart(itemAdd, counter)
+        setAdd(true)
     }
 
     return (
 
         <>
             <div className="counterContainer">
-                <div className="counterBtns">
-                    <p>Disponibles = {stock}</p>
-                    <div className="counter">
-                        <button onClick={decrementCounter}> - </button>
-                        <p>{counter}</p>
-                        <button onClick={incrementCounter}> + </button>
+                {add ? (<>
+                    <div className="">Producto Agregado al carrito</div>
+                    <div className="">
+                        <button className="btn">Ver Mas Productos</button>
+                        <button className="btn">Finalizar Compra</button>
                     </div>
-                </div>
-                <button className="cardAddButton" onClick={onAdd}>AGREGAR AL CARRITO</button>
+                </>):(
+
+                <>
+                    <div className="counterBtns">
+                        <p>Disponibles = {stock}</p>
+                        <div className="counter">
+                            <button onClick={decrementCounter}> - </button>
+                            <p>{counter}</p>
+                            <button onClick={incrementCounter}> + </button>
+                        </div>
+                    </div>
+                    <button className="btn" onClick={onAdd}>AGREGAR AL CARRITO</button>
+                </>)
+                }
             </div>
         </>
     

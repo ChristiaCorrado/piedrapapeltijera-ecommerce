@@ -1,30 +1,44 @@
 import React,  { useContext } from "react"; 
 import './Cart.css'
 import { CartContext } from "../../context/CartContext";
-
+import { Link } from "react-router-dom";
 const Cart = ( ) =>{
 
     const {cart, removeItem} = useContext(CartContext)
 
     return(
-        <>
-            
-                {cart.length === 0 ? (<div className="cartVacio"><div className="cartVacioImg"></div>Tu carrito se encuentra vacio!</div>) : cart.map((items) => {
-                    return <div className="cardCart">  
-                                <img src={items.picture_url} alt={items.id} />
-                                <div className="cardBody">
-                                    <div className="cardTitle">{items.title}</div>
-                                    <div>cantidad: {items.quantity}</div>
-                                    <div>Precio ${items.unit_price}</div>
-                                    <div></div>
+        <>  
+            <div>
+            <div className="titleCart">Este es tu carrito!</div>
+                {cart.length === 0 ? (<div className="cartVacio">
+                                        <div className="imgCartVacio"></div>
+                                        <div>
+                                            <div className="titleCartVacio">Tu carrito se encuentra vacio!
+                                            <Link to={"/products"}><button className="btn btnCartAdd">Ver Productos</button></Link>
+                                            </div>
+                                        </div>
+                                      </div>) : cart.map((items) => {
+
+                    return <div className="productInCart">
+                                
+                                <div>      
+                                    <div className="cardCart">  
+                                        <img src={items.picture_url} alt={items.id} />
+                                        <div className="cardProductBody">
+                                            <div className="productTitle">{items.title}</div>
+                                            <div>cantidad: {items.quantity}</div>
+                                            <div>Precio ${items.unit_price}</div>
+                                            <div></div>
+                                        </div>
+                                        <div onClick={removeItem} class="far fa-trash-alt removeItem"></div>
+                                    </div>
                                 </div>
-                                <div onClick={removeItem} class="far fa-trash-alt removeItem"></div>
                            </div>
                 }
                 )
                 }
 
-           
+           </div>
 
         </> 
     )
