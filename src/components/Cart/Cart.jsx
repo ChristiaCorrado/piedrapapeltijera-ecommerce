@@ -28,7 +28,7 @@ const Cart = ( ) =>{
                                                 <div>Precio Unitario ${items.unit_price}</div>
                                                 <div>Total = ${items.unit_price*items.quantity}</div>
                                             </div>
-                                            <div onClick={removeItem} value={items.id} class="far fa-trash-alt removeItem"></div>
+                                            <div onClick={removeItem} value={items.id} className="far fa-trash-alt removeItem"></div>
                                         </div>                           
                             </div>
                     }

@@ -1,36 +1,33 @@
 import React from 'react'
 import './Slider.css'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons'
-import SliderImage from './SliderImage.json'
-import { useState } from 'react'
 
-
-const Slider = ({ slides }) => {
-
-    const [current,setCurrent] = useState(0)
-   
-    const length = slides.length;
-
-    const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current-1);
-    }
-
-    if(!Array.isArray(slides) || slides.length <=0){
-        return null;
-    }
+const Slider = () => {
 
     return(
         <>
             <div className="containerPrincipal">
                                 
-                {SliderImage.map((slide,index) => {
-                   return <img src={slide.img} alt="slide" className="image"/>
-                })}
-                
-                <FontAwesomeIcon icon={faChevronLeft} className="iconsNavLeft"  />
-             
-                <FontAwesomeIcon icon={faChevronRight} className="iconsNavRight" onClick={nextSlide} />
+                <div id="carouselExampleControls" className="carousel slide " data-bs-ride="carousel">
+                    <div className="carousel-inner ">
+                        <div className="carousel-item  active">
+                            <img src="http://www.papelerapiedrapapelytijera.com.ar/media/carrusel-1.jpg" className="" alt="..."/>
+                        </div>
+                        <div className="carousel-item">
+                            <img src="http://www.papelerapiedrapapelytijera.com.ar/media/carrusel-2.jpg" className="" alt="..."/>
+                        </div>
+                        <div className="carousel-item ">
+                            <img src="https://i.imgur.com/xrCML20.jpg" className="" alt="..."/>
+                        </div>
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
        
         </>
