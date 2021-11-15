@@ -50,9 +50,9 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
                     <div className="counterBtns">
                         <p>Disponibles = {stock}</p>
                         <div className="counter">
-                            <button onClick={decrementCounter}> - </button>
+                            <button className="fas fa-caret-down " onClick={decrementCounter}></button>
                             <p>{counter}</p>
-                            <button onClick={incrementCounter}> + </button>
+                            <button className="fas fa-caret-up" onClick={incrementCounter}></button>
                         </div>
                     </div>
                     <button className="btn" onClick={onAdd}>AGREGAR AL CARRITO</button>

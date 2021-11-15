@@ -14,4 +14,24 @@
     justify-content: center;
 }
 
+.totalArticles{
+    background: red;
+    color: white;
+    font-size:18px;
+    font-weight: 700;
+    position :absolute;
+    width: 18px;
+    height: 18px;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.bag{
+    position: relative;
+}
 

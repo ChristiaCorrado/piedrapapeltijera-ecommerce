@@ -3,18 +3,27 @@ import { createContext, useState, useEffect } from 'react'
 export const CartContext = createContext({})
 
 export const CartProvider = ({ children }) => {
-
-  const [cartClicked, setCartClicked] = useState(false);
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    localStorage.setItem('cartLocalS', JSON.stringify([cart]))
-  }, [cart])
+  const [itemsTotal, setItemsTotal] = useState()
 
-  useEffect(() =>{
+  useEffect(() => {
+    if (!localStorage.getItem("cartLocalS")) {
+      localStorage.setItem("cartLocalS", JSON.stringify([]));
+    } else {
+      setCart(JSON.parse(localStorage.getItem("cartLocalS")));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('cartLocalS', JSON.stringify(cart))
     const myCart = JSON.parse(localStorage.getItem('cartLocalS'));
     console.log(myCart);
-  })
+    const totalItemsCart = myCart.reduce((ant, items) => { return ant + items.quantity}, 0);
+    console.log(totalItemsCart);
+    setItemsTotal(JSON.stringify(totalItemsCart));
+    console.log(itemsTotal);
+  }, [cart,itemsTotal]);
 
   
   
@@ -29,10 +38,10 @@ export const CartProvider = ({ children }) => {
         }else return cartObtenido
       })
       setCart(newCart);
-      setCartClicked(true)
+
     }else {
       setCart((prev) =>[...prev, { ...itemObtenido,quantity }]);
-      setCartClicked(true)
+
     }
   }
 
@@ -44,16 +53,6 @@ export const CartProvider = ({ children }) => {
   
     
 
-  const clickOnCart = () => {
-      if (cartClicked === false) {
-          setCartClicked(true)
-         
-      }else{
-          setCartClicked(false)
-          
-      }  
-  }
-
 
 
   return(
@@ -62,8 +61,7 @@ export const CartProvider = ({ children }) => {
         addItemToCart,
         cart,
         removeItem,
-        cartClicked,
-        clickOnCart,
+        itemsTotal
       }}>
       {children}
     </CartContext.Provider>

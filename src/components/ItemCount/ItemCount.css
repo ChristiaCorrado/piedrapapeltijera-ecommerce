@@ -32,6 +32,8 @@
 
 .counter button {
     background: transparent;
+    cursor: pointer;
+    font-size:30px;
 }
 .counterBtns{
     width: 100%;
