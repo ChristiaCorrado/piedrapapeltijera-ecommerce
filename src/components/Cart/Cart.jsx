@@ -4,7 +4,8 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 const Cart = ( ) =>{
 
-    const {cart, removeItem} = useContext(CartContext)
+    const {cart, removeItem, totalDeCompra } = useContext(CartContext)
+ 
 
     return(
         <>  
@@ -28,13 +29,14 @@ const Cart = ( ) =>{
                                                 <div>Precio Unitario ${items.unit_price}</div>
                                                 <div>Total = ${items.unit_price*items.quantity}</div>
                                             </div>
-                                            <div onClick={removeItem} value={items.id} className="far fa-trash-alt removeItem"></div>
+                                            <div id={items.id} onClick={removeItem} className="far fa-trash-alt removeItem"></div>
                                         </div>                           
                             </div>
                     }
                     )
                     }
-                    <div> </div>
+
+                    {totalDeCompra !== 0 ? <div>TOTAL DE SU COMPRA $ {totalDeCompra}</div> : <div Style={'display:hidden'}> (hidden)TOTAL DE SU COMPRA $ {totalDeCompra}</div>}
            </div>
 
         </> 

@@ -7,6 +7,8 @@ export const CartProvider = ({ children }) => {
 
   const [itemsTotal, setItemsTotal] = useState()
 
+  const[totalDeCompra, setTotalDeCompra] = useState()
+
   useEffect(() => {
     if (!localStorage.getItem("cartLocalS")) {
       localStorage.setItem("cartLocalS", JSON.stringify([]));
@@ -17,15 +19,15 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem('cartLocalS', JSON.stringify(cart))
-    const myCart = JSON.parse(localStorage.getItem('cartLocalS'));
-    console.log(myCart);
-    const totalItemsCart = myCart.reduce((ant, items) => { return ant + items.quantity}, 0);
-    console.log(totalItemsCart);
-    setItemsTotal(JSON.stringify(totalItemsCart));
-    console.log(itemsTotal);
-  }, [cart,itemsTotal]);
+    const myCart = JSON.parse(localStorage.getItem('cartLocalS'));    
+    const totalItemsCart = myCart.reduce((ant, items) => { return ant + items.quantity}, 0);  
+    setItemsTotal(JSON.stringify(totalItemsCart)); 
+    
+    let resultado = myCart.reduce((ant, items) => { return ant + items.unit_price*items.quantity}, 0)
+    setTotalDeCompra(resultado.toString())
+    console.log(totalDeCompra);  
+  }, [cart,itemsTotal,totalDeCompra]);
 
-  
   
   const isInCart = (id) => cart.some((item) => item.id === id);
 
@@ -45,23 +47,21 @@ export const CartProvider = ({ children }) => {
     }
   }
 
-  const removeItem = (itemId) => {
-    const newCart = cart.filter(item => item.id === itemId)
-    setCart(newCart);
+  const removeItem = (e) => {
+    console.log(e)
+    const newCartRemove = cart.filter((item) => item.id !== e.target.id);
+    setCart(newCartRemove);
   }
 
   
-    
-
-
-
   return(
     <CartContext.Provider
       value={{
         addItemToCart,
         cart,
         removeItem,
-        itemsTotal
+        itemsTotal,
+        totalDeCompra
       }}>
       {children}
     </CartContext.Provider>
