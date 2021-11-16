@@ -36,7 +36,14 @@ const Cart = ( ) =>{
                     )
                     }
 
-                    {totalDeCompra === 0 ? <div>TOTAL DE SU COMPRA $ {totalDeCompra}</div> : <div Style={'display:hidden'}> (hidden)TOTAL DE SU COMPRA $ {totalDeCompra}</div>}
+                    {totalDeCompra === 0 ? <div>
+                                                <div>
+                                                    TOTAL DE SU COMPRA $ {totalDeCompra}
+                                                </div>
+                                                <div>
+                                                    <button className="btn">Vaciar Carrito</button>
+                                                </div>
+                                            </div> : <div Style={'display:hidden'}> (hidden)TOTAL DE SU COMPRA $ {totalDeCompra}</div>}
            </div>
 
         </> 

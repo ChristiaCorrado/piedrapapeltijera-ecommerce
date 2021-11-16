@@ -11,7 +11,9 @@ const Categories = () =>{
 
     return (
         <>  
-            <div>CATEGORIAS</div>
+            <div className="categoryTitle">
+                <span>CATEGORIAS</span>
+            </div>
             <div className="cardsCategory">
                 <Link to={"products/Boligrafos"}>
                     <div className="cardCategory">
