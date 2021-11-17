@@ -4,9 +4,14 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 const Cart = ( ) =>{
 
-    const {cart, removeItem, totalDeCompra } = useContext(CartContext)
- 
+    const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(CartContext)
 
+    console.log(totalDeCompra);
+
+    const dataClient = { buyer: {name: 'chris', phone: '123', email: 'chris@chis.com'} , items:{cart}, totalDeCompra }
+
+    console.log(dataClient);
+    
     return(
         <>  
             <div>
@@ -14,7 +19,7 @@ const Cart = ( ) =>{
                     {cart.length === 0 ? (<div className="cartVacio">
                                             <div className="imgCartVacio"></div>
                                             <div>
-                                                <div className="titleCartVacio">Tu carrito se encuentra vacio!
+                                                <div className="titleCartVacio">Al parecer tu carrito se encuentra vacio!
                                                 <Link to={"/products"}><button className="btn btnCartAdd">Ver Productos</button></Link>
                                                 </div>
                                             </div>
@@ -36,14 +41,15 @@ const Cart = ( ) =>{
                     )
                     }
 
-                    {totalDeCompra === 0 ? <div>
-                                                <div>
-                                                    TOTAL DE SU COMPRA $ {totalDeCompra}
+                    { cart.length !== 0  ? <div>
+                                                <div className="totalDeCompra">
+                                                    TOTAL DE SU COMPRA $ {totalDeCompra}.
                                                 </div>
-                                                <div>
-                                                    <button className="btn">Vaciar Carrito</button>
+                                                <div className="d-flex">
+                                                    <button className="btn" onClick={ vaciarCart } >Vaciar Carrito</button>
+                                                    <button className="btn" >Finalizar Compra</button>
                                                 </div>
-                                            </div> : <div Style={'display:hidden'}> (hidden)TOTAL DE SU COMPRA $ {totalDeCompra}</div>}
+                                            </div> : <div/> }
            </div>
 
         </> 

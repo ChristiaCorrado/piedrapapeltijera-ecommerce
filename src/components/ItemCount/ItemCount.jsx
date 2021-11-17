@@ -42,7 +42,7 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
                     <div className="">Producto Agregado al carrito</div>
                     <div className="">
                         <Link to="/products"><button className="btn">Ver Mas Productos</button></Link>                        
-                        <Link to="/cart"><button className="btn">Finalizar Compra</button></Link>
+                        <Link to="/cart"><button className="btn">Ver Carrito</button></Link>
                     </div>
                 </>):(
 

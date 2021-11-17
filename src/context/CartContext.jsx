@@ -53,10 +53,7 @@ export const CartProvider = ({ children }) => {
     setCart(newCartRemove);
   }
 
-  const vaciarCart=()=> {
-    setCart([])
-  }
-
+  const vaciarCart=()=> setCart([])
   
   return(
     <CartContext.Provider
