@@ -1,0 +1,137 @@
+
+.wrapper .container {
+    width: 65%;
+    padding: 5% 10%;
+}
+
+.wrapper h1 {
+    align-self: center;
+}
+
+.wrapper form {
+    width: 100%;
+}
+
+.wrapper input {
+    width: 100%;
+    min-height: 25px;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    font-family: "Arimo";
+    margin-top: 5px;
+    color: black;
+    border-radius: 4px;
+}
+
+.wrapper label {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.wrapper h1 {
+    font-size: 24px;
+    line-height: 10px;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.wrapper h1:nth-of-type(2) {
+    margin-top: 10%;
+}
+
+.wrapper .name {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.wrapper .name   div {
+    width: 45%;
+}
+
+.wrapper .address-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .address-info  div {
+    width: 30%;
+}
+
+.wrapper .cc-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .cc-info div {
+    width: 45%;
+}
+.wrapper .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.wrapper .btns button {
+    margin: 3px 0;
+    height: 30px;
+    width: 100%;
+    color: #cfc9e1;
+    background-color: #4a3b76;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: .3rem;
+    letter-spacing: 2px;
+}
+
+.wrapper input:focus,
+button:focus {
+    outline: none;
+}
+
+@media (max-width: 736px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .btns {
+        align-items: center;
+    }
+
+    .btns button {
+        width: 50%;
+    }
+
+    form h1 {
+        text-align: center;
+    }
+
+    .name, .address-info, .cc-info {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cc-info div {
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    .street, .cc-num {
+        text-align: center;
+    }
+
+    input {
+        margin: 5px 0;
+        min-height: 30px;
+    }
+}

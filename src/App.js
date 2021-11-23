@@ -6,6 +6,8 @@ import NavBar from './components/navBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
+import Footer from './components/Footer/Footer';
+import Checkout from './components/Checkout/Checkout.jsx';
 
 
 function App() {
@@ -27,10 +29,6 @@ function App() {
             <ItemListContainer/>
           </Route>
 
-          <Route exact path="/products/:categoryId">
-            <ItemListContainer/>
-          </Route>
-
           <Route exact path="/item/:productId">
             <ItemDetailContainer/>
           </Route>
@@ -39,7 +37,13 @@ function App() {
             <Cart/>
           </Route>
 
+          <Route exact path="/checkout">
+            <Checkout/>
+          </Route>
+
         </Switch>
+
+        <Footer/>
       </CartProvider>
       
       

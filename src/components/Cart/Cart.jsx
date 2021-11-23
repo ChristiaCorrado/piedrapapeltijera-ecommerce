@@ -2,19 +2,16 @@ import React,  { useContext } from "react";
 import './Cart.css'
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+
 const Cart = ( ) =>{
 
     const {cart, removeItem, totalDeCompra, vaciarCart } = useContext(CartContext)
 
-    console.log(totalDeCompra);
-
-    const dataClient = { buyer: {name: 'chris', phone: '123', email: 'chris@chis.com'} , items:{cart}, totalDeCompra }
-
-    console.log(dataClient);
+   
     
     return(
         <>  
-            <div>
+            
                 <div className="titleCart">Este es tu carrito!</div>
                     {cart.length === 0 ? (<div className="cartVacio">
                                             <div className="imgCartVacio"></div>
@@ -41,16 +38,16 @@ const Cart = ( ) =>{
                     )
                     }
 
-                    { cart.length !== 0  ? <div>
-                                                <div className="totalDeCompra">
+                    { cart.length !== 0  ? <div className="pt-5 productInCart">
+                                                <div className="totalDeCompra d-flex justify-content-end">
                                                     TOTAL DE SU COMPRA $ {totalDeCompra}.
                                                 </div>
                                                 <div className="d-flex">
-                                                    <button className="btn" onClick={ vaciarCart } >Vaciar Carrito</button>
-                                                    <button className="btn" >Finalizar Compra</button>
+                                                    <button className="btn btn-danger me-4" onClick={ vaciarCart } >Vaciar Carrito</button>
+                                                    <Link to={"/checkout"} className="btn btn-success ms-4">Finalizar Compra</Link> 
                                                 </div>
                                             </div> : <div/> }
-           </div>
+           
 
         </> 
     )

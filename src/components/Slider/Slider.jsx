@@ -10,11 +10,9 @@ const Slider = () => {
                 <div id="carouselExampleControls" className="carousel slide " data-bs-ride="carousel">
                     <div className="carousel-inner ">
                         <div className="carousel-item  active">
-                            <img src="http://www.papelerapiedrapapelytijera.com.ar/media/carrusel-1.jpg" className="" alt="..."/>
+                            <img src="https://i.imgur.com/7r70qiO.png" className="" alt="..."/>
                         </div>
-                        <div className="carousel-item">
-                            <img src="http://www.papelerapiedrapapelytijera.com.ar/media/carrusel-2.jpg" className="" alt="..."/>
-                        </div>
+ 
                         <div className="carousel-item ">
                             <img src="https://i.imgur.com/xrCML20.jpg" className="" alt="..."/>
                         </div>

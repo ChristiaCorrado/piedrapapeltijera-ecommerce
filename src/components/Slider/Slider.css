@@ -1,10 +1,10 @@
 .containerPrincipal{
-    height:550px;
+    width: 100%;
     overflow:hidden;
 }
 
 
 .containerPrincipal img{
-    max-height: 550px;
+    width: 100%;
 }
 

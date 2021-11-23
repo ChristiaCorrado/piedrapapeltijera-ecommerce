@@ -16,7 +16,8 @@ const ItemDetail = ( {item} ) => {
                     </div>
 
                     <div className="boxDescription">
-                        <div className="descriptionDetail">{item.description}</div>
+                        <div className="descriptionDetail">{item.title}</div>
+                        <p>{item.description}</p>
                         <div className="priceCardDetail">${item.unit_price}</div>
                         <div className="buttonBox">
                             <div className="counterDetail">
