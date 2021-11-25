@@ -3,13 +3,8 @@ import './NavStyles.css'
 import logo from '../assets/logo.png'
 import CardWidget from '../CardWidget/CardWidget'
 import { Link } from 'react-router-dom'
-// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-// import {faBars} from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = ()=>{
-
-    
-
     const [clicked,setClicked] = useState(false)
     
 

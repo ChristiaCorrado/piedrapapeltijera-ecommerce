@@ -39,7 +39,7 @@ const Categories = () =>{
                 <Link to={'products/Agendas'}>
                     <div className="cardCategory">
                         <h2 className="cardCategory-title">Agendas</h2>
-                        <img src="https://mundofw.com/wp-content/uploads/sb-instagram-feed-images/254462610_2167062260101751_6061584290731911926_nlow.jpg" alt=""/>
+                        <img src="http://www.papelerapiedrapapelytijera.com.ar/media/mediaProductos/escolares/esc5.jpg" alt=""/>
                     </div>
                 </Link>
                 <Link to={'products/Resaltadores'}>

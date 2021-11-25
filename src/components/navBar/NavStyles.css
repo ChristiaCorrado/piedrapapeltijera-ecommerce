@@ -1,5 +1,3 @@
-
-
 .barsMenu{
     display:none;
 }
@@ -29,6 +27,11 @@ nav{
 
 nav img{
     max-width: 180px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
 }
 
 .buttonsMenu{
@@ -77,13 +80,14 @@ li{
 
     .listContainer{
         position: absolute;
-        height:100vh;
+        height: 100vh;
+        bottom: 0;
         width: 70%;
         background: linear-gradient(to right, #fffec6, #fbd786, #f7797d);
         bottom: 0px;
         left: -100%;
         transition: all 0.5s ease;
-        
+        z-index: 30;
     }
 
     .hiddenMenu{
