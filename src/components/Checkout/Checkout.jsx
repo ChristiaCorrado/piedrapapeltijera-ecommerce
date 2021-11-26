@@ -73,7 +73,7 @@ const Checkout = () => {
                     </h1>
 
                     <div className="name">
-                        {input.map(key =><input type={key.type} placeholder={key.placeholder} name={key.name} onChange={setData}/>)}
+                        {input.map(key =><input type={key.type} placeholder={key.placeholder} name={key.name} key={key.name} onChange={setData}/>)}
                     </div>
                    
                     <div className="btns">

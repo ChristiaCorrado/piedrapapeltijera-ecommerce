@@ -7,7 +7,7 @@ const ItemDetail = ( {item} ) => {
      
     return(
         <>
-            <div className="itemDetail">
+            <div key={item.id} className="itemDetail">
                 
                 <div className="boxItemDetail">
 
