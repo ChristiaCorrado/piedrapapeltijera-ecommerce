@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div  className="itemList">
-            {product ? product.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <Loader/>}
+            {product ? product.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <div className="loaderContainer"><Loader/></div>}
         </div>
     )
 }

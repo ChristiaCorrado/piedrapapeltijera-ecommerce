@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer';
 import Checkout from './components/Checkout/Checkout.jsx';
+import Alert404 from './components/Alert404/Alert404.jsx';
 
 
 function App() {
@@ -45,6 +46,9 @@ function App() {
             <Checkout/>
           </Route>
 
+          <Route exact path="*">
+            <Alert404/>
+          </Route>
         </Switch>
 
         <Footer/>
