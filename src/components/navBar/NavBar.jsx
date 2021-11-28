@@ -36,16 +36,15 @@ const NavBar = ()=>{
                      </Link>   
 
                     <Link to={"/products"}>
-                        <li className="listArt">Productos
-                            <ol className="productos">
-                                <li>Boligrafos</li>
-                                <li>Agendas</li>
-                                <li>Marcadores</li>
-                                <li>Accesorios</li>
-                                <li>Resaltadores</li>
-                            </ol>
-                        </li>
+                        <li className="listArt">Productos</li>
                     </Link> 
+                    
+                    <Link to={"/"}>
+                        <li className="listArt">Categorias</li>
+                    </ Link>
+                           
+                    
+
 
                 </ul>
             </div>
