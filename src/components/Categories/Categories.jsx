@@ -32,14 +32,14 @@ const Categories = () =>{
                 <Link to={'products/Accesorios'}>
                     <div className="cardCategory">
                         <h2 className="cardCategory-title">Accesorios</h2>
-                        <img src="https://www.moovingargentina.com.ar/images/banners/home/Banner_MAW_Pastel.jpg" alt=""/>
+                        <img src="https://i.imgur.com/94P1q1D.jpg" alt=""/>
                         
                     </div>
                 </Link>
                 <Link to={'products/Agendas'}>
                     <div className="cardCategory">
                         <h2 className="cardCategory-title">Agendas</h2>
-                        <img src="http://www.papelerapiedrapapelytijera.com.ar/media/mediaProductos/escolares/esc5.jpg" alt=""/>
+                        <img src="https://i.imgur.com/MZbh5xz.png" alt=""/>
                     </div>
                 </Link>
                 <Link to={'products/Resaltadores'}>

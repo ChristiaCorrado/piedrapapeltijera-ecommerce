@@ -36,10 +36,17 @@ const NavBar = ()=>{
                      </Link>   
 
                     <Link to={"/products"}>
-                        <li className="listArt">Productos</li>
+                        <li className="listArt">Productos
+                            <ol className="productos">
+                                <li>Boligrafos</li>
+                                <li>Agendas</li>
+                                <li>Marcadores</li>
+                                <li>Accesorios</li>
+                                <li>Resaltadores</li>
+                            </ol>
+                        </li>
                     </Link> 
-                    
-                    <li className="listArt">Contacto</li>
+
                 </ul>
             </div>
 

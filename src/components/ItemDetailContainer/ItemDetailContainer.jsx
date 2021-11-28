@@ -10,11 +10,10 @@ import {getFirestore} from "../../firebase";
 const ItemDetailContainer = () => {
 
     const {productId} = useParams()
-    console.log(productId);
+    
 
     const [product, setProduct] = useState(null)
 
-    console.log(product);
 
     useEffect(() =>{
         const db = getFirestore()
@@ -25,7 +24,7 @@ const ItemDetailContainer = () => {
 
     return(
         <div  className="itemList">
-            {product ? product.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem}/>) : <div className="loaderContainer"><Loader/></div>}
+            {product ? product.filter((e) => {return e.id === productId}).map(elem => <ItemDetail item={elem} key={elem.id}/>) : <div className="loaderContainer"><Loader/></div>}
         </div>
     )
 }

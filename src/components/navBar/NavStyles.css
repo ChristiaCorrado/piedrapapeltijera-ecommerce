@@ -60,6 +60,12 @@ li{
     cursor: pointer;
 }
 
+ol li{
+    float: left;
+    padding: 10px;
+    display: none;
+}
+
 @media (max-width:425px) {
 
     nav{

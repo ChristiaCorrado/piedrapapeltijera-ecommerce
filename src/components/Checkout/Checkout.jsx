@@ -16,7 +16,7 @@ const Checkout = () => {
     const [clickFin, setClickFin] = useState(false)
 
     const pintarCart = cart
-    console.log(pintarCart);
+   
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ const Checkout = () => {
     })
 
     const setData = (e) => {
-      console.log(e.target.value);
+      
       setDataClient({
         ...dataClient,
         [e.target.name]: e.target.value
@@ -50,7 +50,7 @@ const Checkout = () => {
         compra :cart,
         total:totalDeCompra
     }
-    console.log(orderClient);
+  
     
     
     const generatedOrder = () => {
@@ -73,7 +73,7 @@ const Checkout = () => {
                     </h1>
 
                     <div className="name">
-                        {input.map(key =><input type={key.type} placeholder={key.placeholder} name={key.name} key={key.name} onChange={setData}/>)}
+                        {input.map(key =><input type={key.type} placeholder={key.placeholder} name={key.name} key={key.name} onChange={setData} required/>)}
                     </div>
                    
                     <div className="btns">

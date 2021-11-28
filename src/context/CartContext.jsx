@@ -25,7 +25,7 @@ export const CartProvider = ({ children }) => {
     
     let resultado = myCart.reduce((ant, items) => { return ant + items.unit_price*items.quantity}, 0)
     setTotalDeCompra(resultado.toString())
-    console.log(totalDeCompra);  
+  
   }, [cart,itemsTotal,totalDeCompra]);
 
   
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   }
 
   const removeItem = (e) => {
-    console.log(e)
+  
     const newCartRemove = cart.filter((item) => item.id !== e.target.id);
     setCart(newCartRemove);
   }

@@ -1,8 +1,9 @@
 .image404{
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    height: 80vh;
     background-image: url("./notFound-404.svg");
     background-position: center;
-    background-size: cover;
+    background-size:auto;
     text-align: center;
+    background-repeat: no-repeat;
 }

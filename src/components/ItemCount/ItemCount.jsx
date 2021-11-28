@@ -10,12 +10,14 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
     const [counter, setCounter] = useState(initial)
 
     const [add,setAdd]=useState(false)
+
+    const [alert , setAlert] = useState(false)
     
     const decrementCounter = () =>{
         if (stock !== 0 && counter > initial){
             setCounter(counter - 1)
         }else{
-            alert(`no puede agregar 0`)
+            
         }
     }
     
@@ -23,8 +25,12 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
         if (stock > counter){
             setCounter(counter + 1)
         }else{
-            alert(`no puede agregar mas de ${counter}`)
+           setAlert(true)
         }
+    }
+
+    const closeAlert= () => {
+        setAlert(false)
     }
     
     const {addItemToCart} = useContext(CartContext);
@@ -58,7 +64,16 @@ const ItemCount = ({ stock, initial, itemAdd}) =>{
                     <button className="btn" onClick={onAdd}>AGREGAR AL CARRITO</button>
                 </>)
                 }
-            </div>
+
+                <div className={alert ? "modalNoGuia modalVisibles d-flex justify-content-center align-items-center" : "modalNoGuia d-flex justify-content-center align-items-center" }>
+                            
+                            <div className="containerMjeGGuia d-flex flex-column justify-content-center align-items-center"> 
+                                    <div className="mb-5">No podra agregar mas de {stock} unidades</div>    
+                                    <div className='btn w-50 mt-5'onClick={closeAlert}>CLOSE</div>
+                            </div>
+                            
+                        </div>
+                </div>
         </>
     
     )

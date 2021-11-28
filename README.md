@@ -1,14 +1,49 @@
-# Getting Started with Create React App
+# Ecommerce papelera piedra papel y tijera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto ecommerce realizado con Framework React.JS
 
-## Available Scripts
 
-In the project directory, you can run:
+## Run Locally
 
-### `npm start`
+Clone the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+  git clone https://github.com/ChristiaCorrado/piedrapapeltijera-ecommerce.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Deployment
+
+To deploy this project run
+https://piedrapapelytijera-ecommerce.herokuapp.com/
+
+
+## Librerias extras uilizadas
+
+Bootstrap - Como librería CSS para la maquetación rapida en algunas partes del sitio.
+
+
+
+## Demo
+
+![Alt Text](https://i.imgur.com/17rTG6A.gif)
 
 

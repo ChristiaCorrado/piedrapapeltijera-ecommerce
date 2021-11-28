@@ -7,7 +7,7 @@ const ItemList = ( { allProducts, category } ) =>{
     const products = allProducts
     const categoria = category
     
-    const clasifiedProds = products ? (categoria ? products.filter((items) => { return items.category_id === categoria }) : products) : console.log("esperando");
+    const clasifiedProds = products ? (categoria ? products.filter((items) => { return items.category_id === categoria }) : products) : products;
     
 
     return(
